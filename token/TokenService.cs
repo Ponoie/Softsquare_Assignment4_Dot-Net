@@ -23,8 +23,8 @@ public class TokenService
         };
 
         var token = new JwtSecurityToken(
-            issuer: "yourdomain.com",
-            audience: "yourdomain.com",
+            issuer: "domain",
+            audience: "domainAudience",
             claims: claims,
             expires: DateTime.UtcNow.AddHours(1),
             signingCredentials: new SigningCredentials(_signingKey, SecurityAlgorithms.HmacSha256)

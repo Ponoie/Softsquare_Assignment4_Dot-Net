@@ -9,6 +9,7 @@ using System.Text;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+var secretKey = "YourVeryLongSuperSecretKeyThatIs32BytesLong12345";
 
 // Add services to the container.
 
@@ -28,8 +29,8 @@ builder.Services.AddAuthentication(Options => {
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             ValidIssuer = "domain",
-            ValidAudience = "domain",
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("secretKey"))
+            ValidAudience = "domainAudience",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
     };
 });
 builder.Services.AddAuthorization(Options => {
@@ -89,9 +90,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
-
 app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 

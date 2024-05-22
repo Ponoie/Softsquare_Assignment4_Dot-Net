@@ -69,3 +69,4 @@
 /Users/ponoie/Documents/SoftSquare/apiDotNet/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/ponoie/Documents/SoftSquare/apiDotNet/TodoApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/ponoie/Documents/SoftSquare/apiDotNet/TodoApi/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Users/ponoie/Documents/SoftSquare/apiDotNet/TodoApi/obj/Debug/net8.0/TodoApi.sourcelink.json
